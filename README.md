@@ -30,16 +30,16 @@ O projeto é um web service desenvolvido em Java Spring Boot que realiza o consu
 `https://github.com/MaicouHahn/backend-projeto-Maicou_Hahn_Fortuna-Cristhian_Cardoso_Berthan.git`
 
 ![img_1.png](img_1.png)
-5. Abrir a camada da aplicação chamada `AgriPecuApplica`
-6. Inicializar a aplicação através do botão `Run`
+4. Abrir a camada da aplicação chamada `AgriPecuApplica`
+5. Inicializar a aplicação através do botão `Run`
 
 ![img_2.png](img_2.png)
 
-7. Aplicação inicializada com sucesso.
+6. Aplicação inicializada com sucesso.
 ![img_3.png](img_3.png)
 
 
-8. Abra a ferramenta para executar as requisições HTTP (neste exemplo, utiliza-se o `Postman`)
+7. Abra a ferramenta para executar as requisições HTTP (neste exemplo, utiliza-se o `Postman`)
 
 
 ## 1º Exemplo de uso
