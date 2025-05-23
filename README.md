@@ -145,6 +145,7 @@ Esta API REST fornece dados meteorológicos para cidades cadastradas, incluindo 
 | Método | URI                 | Descrição                             |
 |--------|---------------------|-------------------------------------|
 | GET    | `/cidades`          | Listar todas as cidades cadastradas |
+| GET    | `/cidades/{id}` | Lista uma cidade em específico|
 | GET    | `/cidades/{id}/clima` | Obter clima atual da cidade          |
 | POST   | `/cidades`          | Cadastrar uma nova cidade            |
 | PUT    | `/cidades/{id}`     | Atualizar dados da cidade            |
