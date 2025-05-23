@@ -115,3 +115,97 @@ O projeto é um web service desenvolvido em Java Spring Boot que realiza o consu
   }
 ]
 ```
+
+# Serviço de Meteorologia - API REST
+
+## Descrição
+
+Esta API REST fornece dados meteorológicos para cidades cadastradas, incluindo informações do clima atual e previsões futuras. Ideal para aplicativos que desejam consultar o tempo de forma simples e eficiente.
+
+---
+
+## Casos de Uso
+
+1. Consultar condições meteorológicas atuais de uma cidade.
+2. Gerenciar previsões meteorológicas (criar, consultar, atualizar e deletar).
+
+---
+
+## Recursos
+
+- **Cidades**: cadastro e consulta de cidades disponíveis para consulta do clima.
+- **Previsões**: consulta e gerenciamento das previsões meteorológicas de cada cidade.
+
+---
+
+## Endpoints
+
+### Cidades
+
+| Método | URI                 | Descrição                             |
+|--------|---------------------|-------------------------------------|
+| GET    | `/cidades`          | Listar todas as cidades cadastradas |
+| GET    | `/cidades/{id}/clima` | Obter clima atual da cidade          |
+| POST   | `/cidades`          | Cadastrar uma nova cidade            |
+| PUT    | `/cidades/{id}`     | Atualizar dados da cidade            |
+| DELETE | `/cidades/{id}`     | Remover cidade                       |
+
+### Previsões
+
+| Método | URI                                    | Descrição                               |
+|--------|----------------------------------------|---------------------------------------|
+| GET    | `/cidades/{id}/previsoes`              | Listar previsões para uma cidade      |
+| GET    | `/cidades/{id}/previsoes/{data}`       | Consultar previsão para data específica |
+| POST   | `/cidades/{id}/previsoes`              | Inserir nova previsão meteorológica   |
+| PUT    | `/cidades/{id}/previsoes/{data}`       | Atualizar previsão para uma data      |
+| DELETE | `/cidades/{id}/previsoes/{data}`       | Deletar previsão                      |
+
+---
+
+## Exemplo de Requisição
+
+### Consultar clima atual da cidade
+
+```http
+GET /cidades/123/clima HTTP/1.1
+Host: api.meteorologia.com
+Accept: application/json
+```
+
+### Resposta
+
+```json
+{
+  "cidade": "São Paulo",
+  "data": "2025-05-23T14:00:00Z",
+  "temperatura": 22,
+  "umidade": 60,
+  "descricao": "Parcialmente nublado"
+}
+```
+
+---
+
+## Códigos de Status HTTP
+
+- **200 OK** – Requisição bem sucedida
+- **201 Created** – Recurso criado com sucesso
+- **204 No Content** – Nenhum dado encontrado (para listagens vazias)
+- **400 Bad Request** – Dados inválidos na requisição
+- **404 Not Found** – Recurso não encontrado (cidade ou previsão)
+
+---
+
+## Como Usar
+
+1. **Cadastrar cidades** via `POST /cidades` para que estejam disponíveis para consulta.
+2. **Consultar clima atual** usando `GET /cidades/{id}/clima`.
+3. **Gerenciar previsões** com os métodos POST, PUT, DELETE no recurso `/previsoes`.
+
+---
+
+## Tecnologias Utilizadas
+
+- API RESTful
+- JSON para troca de dados
+- HTTP para comunicação  
